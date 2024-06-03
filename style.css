@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+#productModal .modal-body {
+    text-align: center;
+}
+
+#productModal img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}

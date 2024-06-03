@@ -1,31 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Store House Nepal</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <h1>
-        Hello World how are you ?????
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Store House Nepal</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="cart-button">Cart (<span id="cart-count">0</span>)</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-    </h1>
+    <div class="container mt-5">
+        <div class="row" id="product-list">
+            <!-- Product cards will be inserted here by JavaScript -->
+        </div>
+    </div>
 
-    <form name="contact"  netlify>
-        <p>
-            <label>Name <input type="text" name="name" /></label>
-        </p>
-        <p>
-            <label>Email <input type="email" name="email" /></label>
-        </p>
-        <p>
-            <button type="submit" >Send</button>
-            
-        </p>
-    </form>
-    <a href='index2.html'>Click Here!!</a>
+    <!-- Product Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel">Product Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img id="product-image" src="" class="img-fluid" alt="Product Image">
+                    <h5 id="product-title"></h5>
+                    <p id="product-description"></p>
+                    <p id="product-price"></p>
+                    <button class="btn btn-primary" id="add-to-cart-button">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
 </body>
-
 </html>
