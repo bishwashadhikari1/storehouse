@@ -6,6 +6,20 @@
     <title>Store House Nepal</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <style>
+        .card-text {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card-text .text-muted {
+            margin-right: 10px;
+        }
+        .card-text .text-danger {
+            font-size: 1.25rem;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -16,7 +30,9 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#" id="cart-button">Cart (<span id="cart-count">0</span>)</a>
+                    <a class="nav-link" href="#" id="cart-button">
+                        <img src="https://img.icons8.com/ios-filled/50/000000/shopping-cart.png" style="width: 25px;"/> Cart (<span id="cart-count">0</span>)
+                    </a>
                 </li>
             </ul>
         </div>
@@ -27,6 +43,9 @@
             <!-- Product cards will be inserted here by JavaScript -->
         </div>
     </div>
+
+    <!-- Toast container -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3"></div>
 
     <!-- Product Modal -->
     <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
